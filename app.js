@@ -1,56 +1,72 @@
 //create array allImages
 var allImages = [];
-var rand1, rand2;
-var image1 = document.getElementById('image1');
-var image2 = document.getElementById('image2');
-
 function Image(name) {
   this.name = name
   this.vote = 0
   allImages.push(this)
 }
-  new Image('1.jpg');
-  new Image('2.jpg');
-  new Image('3.jpg');
-  new Image('4.jpg');
-  new Image('5.jpg');
-  new Image('6.jpg');
-  new Image('7.jpg');
-  new Image('8.jpg');
-  new Image('9.jpg');
-  new Image('10.jpg');
-  new Image('11.jpg');
-  new Image('12.jpg');
+  new Image('baseball.jpg');
+  new Image('skateboard.jpg');
+  new Image('bicycle.jpg');
+  new Image('headin.jpg');
+  new Image('littlegirl.jpg');
+  new Image('beatles.jpg');
+  new Image('snowboard.jpg');
+  new Image('robot.jpg');
+  new Image('minecraft.jpg');
+  new Image('gymnastic.jpg');
+  new Image('bmx.jpg');
+  new Image('beach.jpg');
 
 function ranImg() {
     var ranNum = Math.floor(Math.random() * allImages.length);
     return allImages[ranNum];
 }
 
-function makePhoto(){
-  rand1 = ranImg();
-  rand2 = ranImg();
-    image1.setAttribute('src', 'img/' + rand1.name);
-    image2.setAttribute('src', 'img/' + rand2.name);
+var leftClick = document.getElementById('image1');
+var rightClick = document.getElementById('image2');
+var rand1, rand2;
+function showPhoto(){
+  do {
+    rand1 = ranImg();
+    rand2 = ranImg();
+  } while(rand1 === rand2);
+  leftClick.setAttribute('src', 'img/' + rand1.name);
+  rightClick.setAttribute('src', 'img/' +  rand2.name);
 }
 
-image1.addEventListener('click',makePhoto);
-image2.addEventListener('click',makePhoto);
+showPhoto();
 
-makePhoto();
-// var
+leftClick.addEventListener('click', function() {
+  rand1.vote += 1;
+  console.log(rand1.vote + rand2.name);
+  showPhoto();
+});
+
+rightClick.addEventListener('click',function(){
+  rand1.vote += 1;
+  console.log(rand2.vote + rand2.name);
+  showPhoto();
+});
+
+// function vote() {
+//   allImages[image1].vote +=1;
+//   alert(image1 +' got one vote!');
+//   allImages[image2].vote +=1;
+//   alert(image2 +' got one vote!')
+// }
+
+
 // function vote(){
-//   for(i=0, i<=allImages.length,i++);
+//      for(i=0, i<allImages.length,i++);
 //   if(){
-//     ran1 count +1
-//   }else{
-//     ran2 count 1
+//      rand1.vote[0] = rand1.vote[0] +1
+//    }else{
+//      rand2.vote[0] = rand2.vote[0] +1
 //   }
 
 
-//Tally
-// function countone(){
-//  Image
+
 
 
 

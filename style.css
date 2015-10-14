@@ -1,14 +1,24 @@
+header{
+  text-align: center;
+}
+
 h1{
   text-align: center;
 }
 
-.b1, .b2{
+img{
+  border-width: thick
+}
+
+
+div{
   display: inline-block;
   position: relative;
   margin left: auto;
   margin right: auto;
-  height: 400px;
-  background-color: lighgrey
+  height: 200px;
 }
+
+
 
 
