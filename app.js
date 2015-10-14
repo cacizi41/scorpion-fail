@@ -1,9 +1,9 @@
 //create array allImages
 var allImages = [];
 function Image(name) {
-  this.name = name
-  this.vote = 0
-  allImages.push(this)
+  this.name = name;
+  this.vote = 0;
+  allImages.push(this);
 }
   new Image('baseball.jpg');
   new Image('skateboard.jpg');
@@ -39,31 +39,17 @@ showPhoto();
 
 leftClick.addEventListener('click', function() {
   rand1.vote += 1;
-  console.log(rand1.vote + rand2.name);
+  console.log(rand1.vote + rand1.name);
   showPhoto();
+ // .innerHTML
 });
 
 rightClick.addEventListener('click',function(){
-  rand1.vote += 1;
+  rand2.vote += 1;
   console.log(rand2.vote + rand2.name);
   showPhoto();
+  //.innerHTML
 });
-
-// function vote() {
-//   allImages[image1].vote +=1;
-//   alert(image1 +' got one vote!');
-//   allImages[image2].vote +=1;
-//   alert(image2 +' got one vote!')
-// }
-
-
-// function vote(){
-//      for(i=0, i<allImages.length,i++);
-//   if(){
-//      rand1.vote[0] = rand1.vote[0] +1
-//    }else{
-//      rand2.vote[0] = rand2.vote[0] +1
-//   }
 
 
 
