@@ -1,12 +1,18 @@
 //create array allImages
-var allImages = [];
 function Image(name) {
   this.name = name;
   this.vote = 0;
   allImages.push(this);
 }
+var allImages = [];
+
+// call load function and get data right after page refreshes
+loadLocal();
+
+// make images into a funciton to help load pics faster
+function makeImg(){
   var baseball  = new Image('baseball.jpg');
-  var  skateboard = new Image('skateboard.jpg');
+  var skateboard = new Image('skateboard.jpg');
   var bicycle = new Image('bicycle.jpg');
   var headin = new Image('headin.jpg');
   var littlegirl = new Image('littlegirl.jpg');
@@ -17,6 +23,8 @@ function Image(name) {
   var gymnastic = new Image('gymnastic.jpg');
   var bmx = new Image('bmx.jpg');
   var beach = new Image('beach.jpg');
+}
+
 
 function ranImg() {
     var ranNum = Math.floor(Math.random() * allImages.length);
@@ -42,7 +50,7 @@ leftClick.addEventListener('click', function() {
   console.log(rand1.vote + rand1.name);
   showPhoto();
   makeChart();
- // .innerHTML
+  createLocal();
 });
 
 rightClick.addEventListener('click',function(){
@@ -50,90 +58,90 @@ rightClick.addEventListener('click',function(){
   console.log(rand2.vote + rand2.name);
   showPhoto();
   makeChart();
-  //.innerHTML
+  createLocal();
 });
 
 function makeChart() {
   var data = [
     {
-      value: baseball.vote,
+      value: allImages[0].vote,
       label: 'baseball',
       color: '#90C3D4',
       highlight: '#6699FF'
 
     },
     {
-      value: skateboard.vote,
+      value: allImages[1].vote,
       label: 'skateboard',
       color: '#9966FF',
       highlight: '#CC00FF'
 
     },
     {
-      value: bicycle.vote,
+      value: allImages[2].vote,
       label: 'baseball',
       color: '#FF66FF',
       highlight: '#FF6699'
 
     },
     {
-      value: headin.vote,
+      value: allImages[3].vote,
       label: 'headin',
       color: '#FF9933',
       highlight: '#FF6600'
 
     },
     {
-      value: littlegirl.vote,
+      value: allImages[4].vote,
       label: 'littlegirl',
       color: '#CC6699',
       highlight: '#CC0066'
 
     },
     {
-      value: beatles.vote,
+      value: allImages[5].vote,
       label: 'beatles',
       color: '#99CC00',
       highlight: '#669900'
 
     },
     {
-      value: snowboard.vote,
+      value: allImages[6].vote,
       label: 'snowboard',
       color: '#CC6699',
       highlight: '#FF9933'
 
     },
     {
-      value: robot.vote,
+      value: allImages[7].vote,
       label: 'robot',
       color: '#9966FF',
       highlight: '#FF66FF'
 
     },
     {
-      value: minecraft.vote,
+      value: allImages[8].vote,
       label: 'minecraft',
       color: '#FF66FF',
       highlight: 'red'
 
     },
     {
-      value: gymnastic.vote,
+      value: allImages[9].vote,
       label: 'gymnastic',
       color: '#9966FF',
       highlight: '#CC6699'
 
     },
     {
-      value: bmx.vote,
-      label: 'bmx',
+      value: allImages[10].vote,
+      label:'bmx',
       color: '#CC6699',
       highlight: '#99CC00'
 
     },
     {
-      value: beach.vote,
+      value: allImages[11].vote,
       label: 'beach',
       color: '#99CC00',
       highlight: '#CC6699'
@@ -147,12 +155,25 @@ function makeChart() {
     animationEasing: 'easeOutBounce',
     animationRotate : true,
     animateScale : true,
-
-
   });
 }
 makeChart();
 
+//local storage
+function createLocal(){
+localStorage.setItem("key",JSON.stringify(allImages));
+
+}
+
+function loadLocal(){
+  var storedValue = localStorage.getItem("key");
+  console.log(storedValue)
+  if (storedValue!=null){
+    allImages = JSON.parse(localStorage.getItem('key'));
+  }else{
+    makeImg();
+  }
+}
 
 
 
