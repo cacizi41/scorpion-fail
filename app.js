@@ -58,85 +58,85 @@ function makeChart() {
     {
       value: baseball.vote,
       label: 'baseball',
-      color: 'blue',
-      highlight: 'red'
+      color: '#90C3D4',
+      highlight: '#6699FF'
 
     },
     {
       value: skateboard.vote,
       label: 'skateboard',
-      color: 'blue',
-      highlight: 'red'
+      color: '#9966FF',
+      highlight: '#CC00FF'
 
     },
     {
       value: bicycle.vote,
       label: 'baseball',
-      color: 'blue',
-      highlight: 'red'
+      color: '#FF66FF',
+      highlight: '#FF6699'
 
     },
     {
       value: headin.vote,
       label: 'headin',
-      color: 'blue',
-      highlight: 'red'
+      color: '#FF9933',
+      highlight: '#FF6600'
 
     },
     {
       value: littlegirl.vote,
       label: 'littlegirl',
-      color: 'blue',
-      highlight: 'red'
+      color: '#CC6699',
+      highlight: '#CC0066'
 
     },
     {
       value: beatles.vote,
       label: 'beatles',
-      color: 'blue',
-      highlight: 'red'
+      color: '#99CC00',
+      highlight: '#669900'
 
     },
     {
       value: snowboard.vote,
       label: 'snowboard',
-      color: 'blue',
-      highlight: 'red'
+      color: '#CC6699',
+      highlight: '#FF9933'
 
     },
     {
       value: robot.vote,
       label: 'robot',
-      color: 'blue',
-      highlight: 'red'
+      color: '#9966FF',
+      highlight: '#FF66FF'
 
     },
     {
       value: minecraft.vote,
       label: 'minecraft',
-      color: 'blue',
+      color: '#FF66FF',
       highlight: 'red'
 
     },
     {
       value: gymnastic.vote,
       label: 'gymnastic',
-      color: 'blue',
-      highlight: 'red'
+      color: '#9966FF',
+      highlight: '#CC6699'
 
     },
     {
       value: bmx.vote,
       label: 'bmx',
-      color: 'blue',
-      highlight: 'red'
+      color: '#CC6699',
+      highlight: '#99CC00'
 
     },
     {
       value: beach.vote,
       label: 'beach',
-      color: 'blue',
-      highlight: 'red'
+      color: '#99CC00',
+      highlight: '#CC6699'
     }
   ];
 

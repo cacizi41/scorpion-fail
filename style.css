@@ -1,27 +1,63 @@
-header{
-  text-align: center;
+img.align-center{
+  display: block;
+  margin: 0px auto;
 }
 
+header{
+  font-family: 'Orbitron', 'sans-serif';
+  font-weight: 700;
+  text-align: center;
+  font-size: 50
+}
+
+
 h1{
+  font-family: 'Orbitron', 'sans-serif';
+  font-weight: 400;
   text-align: center;
 }
 
 img{
-  border-width: thick
+  border: solid red
 }
 
+#head{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: red;
+}
 
-div{
+#part{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #efefef;
+}
+.column1, .column2, .column3{
   display: inline-block;
   position: relative;
-  margin left: auto;
-  margin right: auto;
-  height: 200px;
+  margin: 30px;
+  float:left;
 }
-#canvas{
-  max-height: 300px;
-  max-width:  300px;
+
+.column2{
+  max-width: 300px;
+  max-height: 236px;
+  background-color: black;
 }
+
+footer{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+}
+
+
 
 
 
